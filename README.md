@@ -5,4 +5,4 @@ Find the course [here] (https://www.coursera.org/learn/data-structures?specializ
 
 ## 1. Week 1 -  Arrays and Linked List
 
-1. [Check Brackets in Code] {https://github.com/jsrathi17/Data-Structures/blob/master/1_brackets_in_code/check_brackets.py}
+1. [Check Brackets in Code] (https://github.com/jsrathi17/Data-Structures/blob/master/1_brackets_in_code/check_brackets.py)
