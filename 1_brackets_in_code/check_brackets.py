@@ -1,4 +1,3 @@
-# python3
 
 from collections import namedtuple
 
@@ -10,21 +9,30 @@ def are_matching(left, right):
 
 
 def find_mismatch(text):
-    opening_brackets_stack = []
+    opstack = []
     for i, next in enumerate(text):
         if next in "([{":
-            # Process opening bracket, write your code here
+            opstack.append(Bracket(next,i))
             pass
 
-        if next in ")]}":
-            # Process closing bracket, write your code here
-            pass
+        elif next in ")]}":
+            if not opstack:
+                return i+1
+            else:
+                top = opstack.pop()
+                if not are_matching(top.char,next):
+                    return i+1
+
+    if opstack:
+        top = opstack.pop()
+        return top.position+1
+    return "Success"
 
 
 def main():
     text = input()
     mismatch = find_mismatch(text)
-    # Printing answer, write your code here
+    print(mismatch)
 
 
 if __name__ == "__main__":
